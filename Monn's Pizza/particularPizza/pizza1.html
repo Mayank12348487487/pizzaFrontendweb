@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-gray-100" style="font-family: 'Playwrite DE Grund', cursive;background-image: url('/images/AdobeStock_669774374_Preview.jpeg');background-size: cover;background-repeat: no-repeat;height: 100vh;width: 100%;">
+    <nav class="sticky-navbar p-1 bg-black bg-opacity-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="/images/Moon_s_Pizza-removebg-preview.png" alt="Pizza Logo" class="h-20 px-4 md:px-20">
+            <div class="hidden pr-4 md:flex space-x-10 font-bold">
+                <a href="/index.html" class="text-white hover:underline">Home</a>
+                <a href="/index.html#menu" class="text-white hover:underline">Menu</a>
+       
+                <a href="#contact" class="text-white hover:underline">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-10 space-y-4 text-center font-bold text-2xl">
+            <a href="/index.html" class="block text-white">Home</a>
+            <a href="/index.html#menu" class="block text-white">Menu</a>
+           
+            <a href="#contact" class="block text-white">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="flex flex-col md:flex-row max-w-6xl mx-auto py-24  ">
+        <div class="flex-none w-full relative md:w-80 mb-4 md:mb-0 lg:w-[25rem] flex flex-col max-w-full">
+            <img src="/images/2023-10-02 (1).webp" alt="Utility Jacket" class="absolute inset-0 w-full h-full object-fit" loading="lazy" />
+        </div>
+        <div class="md:hidden">
+            <img src="/images/2023-10-02 (1).webp" alt="" class="w-full h-full object-fit inset-2 border-8 border-slate-200 rounded-lg">
+        </div>
+        <form class="flex-auto p-6 bg-white rounded-lg shadow-lg">
+            <div class="flex flex-wrap">
+                <h1 class="flex-auto text-lg font-semibold text-slate-900">Cheese Pepperoni Fry </h1>
+                <div class="text-lg font-semibold text-slate-500 price">&#8377;77</div>
+                <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">Classic pepperoni fry with mozzarella cheese.</div>
+            </div>
+            <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
+                <div class="space-x-2 flex text-sm">
+                    <label>
+                        <input class="sr-only peer" name="size" type="radio" value="sm" checked />
+                        <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white small-size">Sm</div>
+                    </label>
+                    <label>
+                        <input class="sr-only peer" name="size" type="radio" value="md" />
+                        <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white medium-size">Md</div>
+                    </label>
+                    <label>
+                        <input class="sr-only peer" name="size" type="radio" value="lg" />
+                        <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white large-size">Lg</div>
+                    </label>
+                   
+                </div>
+            </div>
+            <div class="flex space-x-4 mb-6 text-sm font-medium">
+                <div class="flex-auto flex space-x-4">
+                    <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">Buy now</button>
+                    <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900" type="button">Add to bag</button>
+                </div>
+                <button class=" like-btn flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                    <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                    </svg>
+                </button>
+            </div>
+            <p class="text-sm text-slate-700">Free shipping on all continental US orders.</p>
+        </form>
+    </div>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const likeBtn = document.querySelector('.like-btn');
+        const smallSize = document.querySelector('.small-size');
+        const mediumSize = document.querySelector('.medium-size');
+        const largeSize = document.querySelector('.large-size');
+        const price = document.querySelector('.price');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        likeBtn.addEventListener('click', () => {
+            likeBtn.classList.toggle('text-red-500');
+        })
+        smallSize.addEventListener('click', () => {
+            price.innerHTML = '&#8377;77';
+        })
+        mediumSize.addEventListener('click', () => {
+            price.innerHTML = '&#8377;150';
+        })
+        largeSize.addEventListener('click', () => {
+            price.innerHTML = '&#8377;180';
+        })
+    </script>
+</body>
+</html>

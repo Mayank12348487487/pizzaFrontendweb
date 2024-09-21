@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delight</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+       
+
+        /* Set background image to the container wrapping the navbar and hero */
+        .hero-container {
+            background-image: url('/images/AdobeStock_784812482_Preview.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Make navbar sticky and fixed */
+        .sticky-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+          
+        }
+
+    </style>
+</head>
+<body class="font-sans bg-gray-100" style="font-family: 'Playwrite DE Grund', cursive;">
+    
+    <!-- Hero + Navbar Container -->
+    <div class="hero-container h-screen relative">
+        <!-- Navbar -->
+        <nav class="sticky-navbar p-1 bg-black bg-opacity-50">
+            <div class="container mx-auto flex justify-between  items-center">
+                <!-- Logo Image -->
+                <img src="/images/Moon_s_Pizza-removebg-preview.png" alt="Pizza Logo" class="h-20 md:px-20"> <!-- Increased height, transparent PNG -->
+
+                <div class="hidden pr-14 md:flex space-x-10 font-bold">
+                    <a href="#home" class="text-white hover:underline">Home</a>
+                    <a href="#menu" class="text-white hover:underline">Menu</a>
+                    
+                    <a href="#contact" class="text-white hover:underline">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white text-2xl pr-5"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-10 space-y-4 text-center font-bold text-2xl">
+                <a href="#home" class="block text-white ">Home</a>
+                <a href="#menu" class="block text-white ">Menu</a>
+               
+                <a href="#contact" class="block text-white ">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="h-full flex items-center justify-center">
+            <div class="bg-black bg-opacity-50 p-10 text-center rounded-lg">
+                <h2 class="text-5xl text-white font-extrabold">Delicious Pizza Delivered to Your Door</h2>
+                <p class="text-gray-200 mt-4">Order your favorite pizza with a few clicks</p>
+                <!-- Updated button with shadow effect on hover -->
+                <a href="#menu" class="mt-6 inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-shadow duration-300">View Menu</a>
+            </div>
+        </section>
+
+
+        <section id="menu" class="py-5 px-10 bg-gray-100">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-10">
+                    <!-- Pizza Item 1 -->
+                    <a href="particularPizza/pizza1.html" class="bg-white shadow-md rounded-lg overflow-hidden mx-auto w-full max-w-xs transform transition-transform duration-200 hover:scale-105 hover:shadow-xl"> 
+                        <img src="/images/2023-10-02 (1).webp" alt="Cheese Pepperoni Fry" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Cheese Pepperoni Fry</h3>
+                            <p class="text-gray-600 mt-1">Classic pepperoni fry with mozzarella cheese.</p>
+                            <span class="block mt-2 text-lg font-semibold text-red-600">&#8377;149</span>
+                        </div>
+                    </a>
+        
+                    <!-- Pizza Item 2 -->
+                    <a href="particularPizza/pizza2.html" class="bg-white shadow-md rounded-lg overflow-hidden mx-auto w-full max-w-xs transform transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                        <img src="/images/2023-10-02 (3).webp" alt="Chilli Paneer" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Chilli Paneer</h3>
+                            <p class="text-gray-600 mt-1">Fresh paneer, mozzarella, and tomatoes.</p>
+                            <span class="block mt-2 text-lg font-semibold text-red-600">&#8377;200</span>
+                        </div>
+                    </a>
+        
+                    <!-- Pizza Item 3 -->
+                    <a href="particularPizza/pizza3.html" class="bg-white shadow-md rounded-lg overflow-hidden mx-auto w-full max-w-xs transform transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                        <img src="/images/2023-10-02 (4).webp" alt="Veggie Pizza" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Veggie Pizza</h3>
+                            <p class="text-gray-600 mt-1">A mix of fresh vegetables and cheese.</p>
+                            <span class="block mt-2 text-lg font-semibold text-red-600">&#8377;300</span>
+                        </div>
+                    </a>
+        
+                    <!-- Pizza Item 4 -->
+                    <a href="particularPizza/pizza4.html" class="bg-white shadow-md rounded-lg overflow-hidden mx-auto w-full max-w-xs transform transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                        <img src="/images/2023-10-02 (6).webp" alt="Sandwich" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Sandwich</h3>
+                            <p class="text-gray-600 mt-1">Delicious BBQ Sandwich with cheese.</p>
+                            <span class="block mt-2 text-lg font-semibold text-red-600">&#8377;200</span>
+                        </div>
+                    </a>
+        
+                    <!-- Pizza Item 5 -->
+                    <a href="particularPizza/pizza5.html" class="bg-white shadow-md rounded-lg overflow-hidden mx-auto w-full max-w-xs transform transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                        <img src="/images/2023-10-02 (5).webp" alt="Maharaja Burger" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Maharaja Burger</h3>
+                            <p class="text-gray-600 mt-1">Burger with Veggie and cheese.</p>
+                            <span class="block mt-2 text-lg font-semibold text-red-600">&#8377;99.99</span>
+                        </div>
+                    </a>
+        
+                    <!-- Pizza Item 6 -->
+                    <a href="particularPizza/pizza6.html" class="bg-white shadow-md rounded-lg overflow-hidden mx-auto w-full max-w-xs transform transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                        <img src="/images/2023-10-02 (7).webp" alt="Paneer Cheese Pizza" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Paneer Cheese Pizza</h3>
+                            <p class="text-gray-600 mt-1">Paneer Inside Yummy Outside.</p>
+                            <span class="block mt-2 text-lg font-semibold text-red-600">&#8377;279</span>
+                        </div>
+                    </a>
+        
+                    <!-- Pizza Item 7 -->
+                    <a href="particularPizza/pizza7.html" class="bg-white shadow-md rounded-lg overflow-hidden mx-auto w-full max-w-xs transform transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                        <img src="/images/2023-10-02 (8).webp" alt="Fry Momos" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Fry Momos</h3>
+                            <p class="text-gray-600 mt-1">Loaded with pepperoni, sausage, and ham.</p>
+                            <span class="block mt-2 text-lg font-semibold text-red-600">&#8377;180</span>
+                        </div>
+                    </a>
+        
+                    <!-- Pizza Item 8 -->
+                    <a href="particularPizza/pizza8.html" class="bg-white shadow-md rounded-lg overflow-hidden mx-auto w-full max-w-xs transform transition-transform duration-200 hover:scale-105 hover:shadow-xl">
+                        <img src="/images/2023-10-02 (9).webp" alt="Sandwich with Sauce" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Sandwich with Sauce</h3>
+                            <p class="text-gray-600 mt-1">Elegant in taste.</p>
+                            <span class="block mt-2 text-lg font-semibold text-red-600">&#8377;77</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+            <p class="mb-6 text-lg">We'd love to hear from you!</p>
+            <ul class="space-y-3 text-lg">
+                <li>
+                    <strong>Email:</strong> 
+                    <a href="mailto:info@example.com" class="text-green-400 hover:underline">info@example.com</a>
+                </li>
+                <li>
+                    <strong>Phone:</strong> 
+                    <a href="tel:+1234567890" class="text-green-400 hover:underline">+1 234 567 890</a>
+                </li>
+                <li><strong>Address:</strong> 123 Main St, City, Country</li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
